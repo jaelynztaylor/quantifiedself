@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crafting the Self through Coordinates</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <!-- leaflet css  -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
@@ -75,7 +75,7 @@
 
     var contentData = L.geoJSON(content, {
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(`<b>Technique: </b>` + feature.properties.title  +' : '+ feature.properties.popupContent)
+            layer.bindPopup(`<b>Location: </b>` + feature.properties.location)
         },
     }).addTo(map);
 
